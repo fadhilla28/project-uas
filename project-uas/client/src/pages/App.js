@@ -9,6 +9,7 @@ import Success from "./Success";
 import Dashboard from "./Dashboard";
 import DashTrans from "../components/DashTrans";
 import DashAcc from "../components/DashAcc";
+import DashTransDet from "../components/DashTransDet";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/success/:id" element={<Success />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dashTrans" element={<DashTrans />} />
+        <Route path="/dashTransDet" element={<DashTransDet />} />
         <Route path="/dashAcc" element={<DashAcc />} />
       </Routes>
     </BrowserRouter>

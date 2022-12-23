@@ -6,7 +6,7 @@ import Testi1 from "../assets/images/icon-testimonial-1.png";
 import Testi2 from "../assets/images/icon-testimonial-2.png";
 import Testi3 from "../assets/images/icon-testimonial-3.png";
 
-export default function DetailPage(props) {
+export default function DetailPage() {
   const location = useLocation();
   console.log(location);
   return (

@@ -23,24 +23,30 @@ function HomePage() {
       <div className="page-content page-home">
         <Banner />
         <Categories />
-        <div className="container">
-          <div className="row">
-            <div className="col-12" data-aos="fade-up">
-              <h5>Products</h5>
+        <section className="store-new-products">
+          <div className="container">
+            <div className="row">
+              <div className="col-12" data-aos="fade-up">
+                <h5>Products</h5>
+              </div>
+            </div>
+            <div className="row">
+              {products.map((product) => {
+                return (
+                  <Product
+                    id={product.id}
+                    desc1={product.desc1}
+                    desc2={product.desc2}
+                    name={product.name}
+                    price={product.price}
+                    image={serverHost + product.path}
+                    path={product.path}
+                  />
+                );
+              })}
             </div>
           </div>
-          {products.map((product) => {
-            return (
-              <Product
-                id={product.id}
-                name={product.name}
-                price={product.price}
-                image={serverHost + product.path}
-                path={product.path}
-              />
-            );
-          })}
-        </div>
+        </section>
       </div>
     </>
   );
